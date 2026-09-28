@@ -11,24 +11,25 @@ public class arrays_q4 {
             System.out.printf("Enter integer %d of 5: ", index + 1);
             numbers[index] = scanner.nextInt();
         }
-        System.out.println("\nOriginal array:");
+        System.out.println("Original array:");
         
         for (int index = 0; index < numbers.length; index++) {
             System.out.printf("%d ", numbers[index]);
         }
         System.out.println();
 
-        for (int index = 0; index < numbers.length / 2; index++) {
+        int j = 0
+        for (int index = 0; index < numbers.length / 2; index--) {
             // A variable to hold the value of the final constant
             int temporary = numbers[index];
             // Subtract the current index to determine the target position,
             // and subtract 1 to align with the array index (which starts at 0).
-            numbers[index] = numbers[numbers.length - 1 - index];
+            numbers[index] = numbers[j];
             // Resends the value of the initial term
-            numbers[numbers.length - 1 - index] = temporary;
+            numbers[j] = temporary;
         }
 
-        System.out.println("\nReversed array:");
+        System.out.println("Reversed array:");
         for (int index = 0; index < numbers.length; index++) {
             System.out.printf("%d ", numbers[index]);
         }
