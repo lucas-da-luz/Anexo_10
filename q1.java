@@ -1,23 +1,22 @@
-package Anexo_10;
-
 import java.util.Scanner;
 
-public class q1 {
+public class Main {
     public static void main(String[] args) {
 
-        String names[] = new String[10];
-
+        int higher = Integer.MIN_VALUE;
         Scanner scan = new Scanner(System.in);
-          // Cria espaço e adiciona no array
-        for ( int i = 0; i < 10; i ++ ) {
-            System.out.printf("Insira o nome a listar: ");
-            names[i] = scan.nextLine();
+
+        int numbers[] = new int[8];
+        for ( int numbers_index = 0; numbers_index < numbers.length; numbers_index++ ) {
+            System.out.printf("Enter the number for the list: ");
+            numbers[numbers_index] = scan.nextInt();
+
+            if ( numbers[numbers_index] > higher) {
+                higher = numbers_index;
+            }
+
         }
-          // Percorre os espaços e printa
-        for ( int j = 0; j < 10; j ++ ) {
-            System.out.printf("Nome na posição %d: %s\n", j + 1, names[j]);
-        }
+        System.out.printf("The higher number it's in the position %d", higher);
+
     }
 }
-
-
