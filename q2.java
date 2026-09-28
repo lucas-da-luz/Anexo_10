@@ -7,7 +7,7 @@ public class arrays_q2 {
         int sum = 0;
 
         int[] numbers = new int[10];
-        for (int index = 0; index < numbers.length; index++) {
+        for ( int index = 0; index < numbers.length; index++ ) {
             // Numbers.lenght prevents for overpass the array limit
 
             System.out.printf("Enter integer %d of 10: ", index + 1);
